@@ -1,6 +1,7 @@
 
 ## Ex 01 -Simple Web Server using Spring Boot
-
+## Name: Divya P
+## REG NO: 212223040044
 ## AIM:
 To develop a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints.
 ## ALGORITHM:
@@ -41,7 +42,7 @@ Stop the Spring Boot server once testing is complete.
 
 
 ## Program 
-
+```
 simple-web-server/
 ├── src/
 │   └── main/
@@ -52,9 +53,9 @@ simple-web-server/
 │       └── resources/
 │           └── application.properties
 ├── pom.xml
-
+```
  ### Pom.xml
-
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -91,9 +92,9 @@ simple-web-server/
         </plugins>
     </build>
 </project>
-
+```
 ### DemoApplication.java
-
+```java
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -105,15 +106,17 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
-
+```
 
 ### HelloController.java
+```java
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class HelloController {
 
     @GetMapping("/hello")
@@ -121,15 +124,16 @@ public class HelloController {
         return "Hello, Spring Boot!";
     }
 }
-
+```
 
 ### application.properties:
-
- server.port=8081
-
+```
+ server.port=8080
+```
 
 
 
 Output:
 
+<img width="1261" height="866" alt="image" src="https://github.com/user-attachments/assets/6bc330fd-15ee-491a-88b2-b2bfa4141634" />
 
